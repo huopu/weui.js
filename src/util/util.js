@@ -52,7 +52,9 @@ objectAssign($.fn, {
      */
     remove: function () {
         this.forEach(($element) => {
-            $element.parentNode.removeChild($element);
+            if ($element && $element.parentNode) {
+                $element.parentNode.removeChild($element);
+            }
         });
         return this;
     },
