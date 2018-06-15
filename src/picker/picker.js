@@ -340,6 +340,10 @@ function picker() {
 
     _sington = $picker[0];
     _sington.hide = hide;
+    _sington.forceClose = function() {
+        $picker.remove();
+        _sington = false;
+    };
     return _sington;
 }
 
